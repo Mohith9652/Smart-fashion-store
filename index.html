@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Smart Fashion Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Smart Fashion Store</h1>
+    </header>
+
+    <nav>
+        <button onclick="showSection('casual')">Casual</button>
+        <button onclick="showSection('formal')">Formal</button>
+        <button onclick="showSection('ethnic')">Ethnic</button>
+        <button onclick="showSection('sports')">Sports</button>
+        <button onclick="showSection('winter')">Winter</button>
+        <button onclick="showSection('cartSection')">Cart</button>
+    </nav>
+
+    <!-- CASUAL -->
+    <div id="casual" class="section">
+        <h2>Casual Wear</h2>
+        <div class="grid">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+                <h3>White T-Shirt</h3>
+                <p class="price">₹499</p>
+                <button onclick="addToCart('White T-Shirt',499)">Add</button>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb">
+                <h3>Blue Jeans</h3>
+                <p class="price">₹999</p>
+                <button onclick="addToCart('Blue Jeans',999)">Add</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FORMAL -->
+    <div id="formal" class="section">
+        <h2>Formal Wear</h2>
+        <div class="grid">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf">
+                <h3>Formal Shirt</h3>
+                <p class="price">₹1199</p>
+                <button onclick="addToCart('Formal Shirt',1199)">Add</button>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518">
+                <h3>Blazer</h3>
+                <p class="price">₹2499</p>
+                <button onclick="addToCart('Blazer',2499)">Add</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ETHNIC -->
+    <div id="ethnic" class="section">
+        <h2>Ethnic Wear</h2>
+        <div class="grid">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990">
+                <h3>Kurta Set</h3>
+                <p class="price">₹1499</p>
+                <button onclick="addToCart('Kurta Set',1499)">Add</button>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1602810319428-019690571b5b">
+                <h3>Saree</h3>
+                <p class="price">₹1999</p>
+                <button onclick="addToCart('Saree',1999)">Add</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SPORTS -->
+    <div id="sports" class="section">
+        <h2>Sports Wear</h2>
+        <div class="grid">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+                <h3>Track Pants</h3>
+                <p class="price">₹899</p>
+                <button onclick="addToCart('Track Pants',899)">Add</button>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1526401485004-2fda9f3fcbdf">
+                <h3>Gym T-Shirt</h3>
+                <p class="price">₹699</p>
+                <button onclick="addToCart('Gym T-Shirt',699)">Add</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- WINTER -->
+    <div id="winter" class="section">
+        <h2>Winter Wear</h2>
+        <div class="grid">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1542060748-10c28b62716f">
+                <h3>Hoodie</h3>
+                <p class="price">₹1299</p>
+                <button onclick="addToCart('Hoodie',1299)">Add</button>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1520974735194-1c8c4e2d8f61">
+                <h3>Jacket</h3>
+                <p class="price">₹2199</p>
+                <button onclick="addToCart('Jacket',2199)">Add</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CART -->
+    <div id="cartSection" class="section">
+        <h2>Your Cart</h2>
+
+        <div id="cartBox">
+            <ul id="cartItems"></ul>
+            <p>Total: ₹<span id="totalPrice">0</span></p>
+            <button onclick="showAddress()">Checkout</button>
+        </div>
+    </div>
+
+    <!-- ADDRESS -->
+    <div id="addressSection" class="section">
+        <h2>Billing Address</h2>
+
+        <input id="name" placeholder="Full Name">
+        <input id="phone" placeholder="Mobile Number">
+        <input id="address" placeholder="Address">
+
+        <select id="payment">
+            <option>Cash on Delivery</option>
+            <option>UPI</option>
+            <option>Card</option>
+        </select>
+
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
